@@ -65,6 +65,22 @@ Existing extensions are used wherever they fit.
 
 Future: registering each frame against a reference frame (OpenCV) to catch panning and shifts, which gravity can't detect.
 
+## RO-Crate
+
+`stac/` is also an [RO-Crate 1.2](https://w3id.org/ro/crate/1.2): `stac/ro-crate-metadata.json` sits next to `catalog.json`.
+
+- **Source of truth:** STAC. `make_crate.py` generates the crate from the STAC JSON, so never edit the crate by hand.
+- **Mapping:**
+  - the catalog becomes the root `Dataset`, with `mainEntity` = `catalog.json`
+  - a collection folder becomes a `Dataset` with `spatialCoverage` (a `Place` with a WKT point) and `temporalCoverage` (start/end)
+  - an item folder becomes a `Dataset` with `dateCreated`
+  - STAC JSON files become `File`s that `conformsTo` the STAC spec
+  - assets become `File`s with `encodingFormat` and `contentSize`
+  - the license is CC0, set on the root
+- **Link back:** `catalog.json` has a `describedby` link to the crate.
+- **Missing:** no `publisher` or `author` yet, and no per-photo tilt data in the crate (that stays in STAC).
+- **Checking:** `uvx --from roc-validator rocrate-validator validate -l REQUIRED stac` passes.
+
 ## Collections
 
 - One collection per deployment, meaning a fixed camera position and fixed settings.

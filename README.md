@@ -9,6 +9,7 @@ The data is released under **CC0**.
 ```
 data/                    inbox: drop new GoPro JPGs here
 stac/catalog.json        STAC root
+stac/ro-crate-metadata.json  RO-Crate 1.2 description of the same folder (generated from STAC)
 stac/<collection>/items/<id>/<id>.JPG       original
 stac/<collection>/items/<id>/<id>.web.jpg   1600px web copy
 stac/<collection>/items/<id>/<id>.json      STAC item
@@ -26,6 +27,7 @@ python3 rename.py            # preview the renames
 python3 rename.py --apply    # rename
 python3 make_stac.py         # move photos into stac/, make web copies, write the STAC JSON
 python3 build_index.py       # update the viewer's photo list
+python3 make_crate.py        # write the RO-Crate view of the catalog
 ```
 
 Requires Python 3.9+ and Pillow (`pip install pillow`).
