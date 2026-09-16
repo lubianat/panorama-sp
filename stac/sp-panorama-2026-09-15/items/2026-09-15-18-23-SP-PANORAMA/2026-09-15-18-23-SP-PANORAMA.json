@@ -1,6 +1,9 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/perspective-imagery/v1.0.0/schema.json"
+  ],
   "id": "2026-09-15-18-23-SP-PANORAMA",
   "collection": "sp-panorama-2026-09-15",
   "geometry": {
@@ -23,7 +26,20 @@
     "instruments": [
       "gopro-hero10"
     ],
-    "license": "CC0-1.0"
+    "license": "CC0-1.0",
+    "pers:perspective_center": [
+      -46.728094,
+      -23.568747,
+      820.9
+    ],
+    "pers:crs": 4979,
+    "gopro:gravity_vector": [
+      -0.0841700509190559,
+      0.99554431438446,
+      -0.0419324338436127
+    ],
+    "camera:roll": -4.83,
+    "camera:pitch": -2.41
   },
   "assets": {
     "image": {
@@ -37,7 +53,7 @@
     "overview": {
       "href": "2026-09-15-18-23-SP-PANORAMA.web.jpg",
       "type": "image/jpeg",
-      "title": "Web copy (1600px)",
+      "title": "Web copy (1600px, levelled by camera:roll)",
       "roles": [
         "overview",
         "visual"
