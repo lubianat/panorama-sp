@@ -1,0 +1,169 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "sp-panorama-2026-09-15",
+  "title": "São Paulo panorama, first collection",
+  "description": "GoPro HERO10 timelapse photos of the São Paulo skyline, one every 5 minutes.",
+  "license": "CC0-1.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -46.728094,
+          -23.568747,
+          -46.728094,
+          -23.568747
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-09-15T17:58:00-03:00",
+          "2026-09-15T19:58:00-03:00"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    }
+  ]
+}

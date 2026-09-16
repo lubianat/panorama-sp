@@ -1,0 +1,18 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.0.0",
+  "id": "sp-panorama",
+  "description": "Long-running photo panorama of São Paulo. CC0.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "sp-panorama-2026-09-15/collection.json",
+      "type": "application/json"
+    }
+  ]
+}
