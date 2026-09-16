@@ -137,7 +137,9 @@ def main():
         "type": "Catalog", "stac_version": V, "id": "sp-panorama",
         "description": "Long-running photo panorama of São Paulo. CC0.",
         "links": [{"rel": "root", "href": "catalog.json", "type": JSON_T},
-                  {"rel": "child", "href": f"{COLLECTION}/collection.json", "type": JSON_T}],
+                  {"rel": "child", "href": f"{COLLECTION}/collection.json", "type": JSON_T},
+                  {"rel": "describedby", "href": "ro-crate-metadata.json", "type": "application/ld+json",
+                   "title": "RO-Crate metadata"}],
     })
     print(f"{len(jpgs)} items -> {STAC}")
 
