@@ -1,0 +1,1385 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "SP Panorama",
+      "description": "Long-running photo panorama of São Paulo. CC0.",
+      "license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "datePublished": "2026-09-16",
+      "mainEntity": {
+        "@id": "catalog.json"
+      },
+      "hasPart": [
+        {
+          "@id": "catalog.json"
+        },
+        {
+          "@id": "images.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/"
+        }
+      ]
+    },
+    {
+      "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "@type": "CreativeWork",
+      "name": "CC0 1.0 Universal",
+      "description": "Public domain dedication: no rights reserved."
+    },
+    {
+      "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0",
+      "@type": "CreativeWork",
+      "name": "STAC specification 1.0.0",
+      "description": "SpatioTemporal Asset Catalog specification."
+    },
+    {
+      "@id": "catalog.json",
+      "@type": "File",
+      "name": "catalog.json",
+      "contentSize": "532",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Catalog (JSON)."
+    },
+    {
+      "@id": "images.json",
+      "@type": "File",
+      "name": "images.json",
+      "contentSize": "2252",
+      "encodingFormat": "application/json",
+      "description": "Photo list used by the web viewer."
+    },
+    {
+      "@id": "#place-sp-panorama-2026-09-15",
+      "@type": "Place",
+      "name": "Camera site, São Paulo",
+      "geo": {
+        "@id": "#geo-sp-panorama-2026-09-15"
+      }
+    },
+    {
+      "@id": "#geo-sp-panorama-2026-09-15",
+      "@type": "Geometry",
+      "name": "Camera position (-23.568747, -46.728094)",
+      "asWKT": "POINT(-46.728094 -23.568747)"
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/collection.json",
+      "@type": "File",
+      "name": "collection.json",
+      "contentSize": "4832",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Collection (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-17-58-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-17-58-SP-PANORAMA.JPG",
+      "contentSize": "5041098",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-17-58-SP-PANORAMA.web.jpg",
+      "contentSize": "132971",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-17-58-SP-PANORAMA",
+      "dateCreated": "2026-09-15T17:58:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T17:58:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/2026-09-15-17-58-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-03-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-03-SP-PANORAMA.JPG",
+      "contentSize": "5017965",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-03-SP-PANORAMA.web.jpg",
+      "contentSize": "139317",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-03-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:03:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:03:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/2026-09-15-18-03-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-08-SP-PANORAMA.json",
+      "contentSize": "1760",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-08-SP-PANORAMA.JPG",
+      "contentSize": "4883078",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-08-SP-PANORAMA.web.jpg",
+      "contentSize": "143421",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-08-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:08:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:08:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/2026-09-15-18-08-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-13-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-13-SP-PANORAMA.JPG",
+      "contentSize": "5069216",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-13-SP-PANORAMA.web.jpg",
+      "contentSize": "122891",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-13-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:13:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:13:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/2026-09-15-18-13-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-18-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-18-SP-PANORAMA.JPG",
+      "contentSize": "5087446",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-18-SP-PANORAMA.web.jpg",
+      "contentSize": "115582",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-18-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:18:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:18:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/2026-09-15-18-18-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-23-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-23-SP-PANORAMA.JPG",
+      "contentSize": "5114681",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-23-SP-PANORAMA.web.jpg",
+      "contentSize": "111655",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-23-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:23:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:23:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/2026-09-15-18-23-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-28-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-28-SP-PANORAMA.JPG",
+      "contentSize": "5070530",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-28-SP-PANORAMA.web.jpg",
+      "contentSize": "110444",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-28-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:28:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:28:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/2026-09-15-18-28-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-33-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-33-SP-PANORAMA.JPG",
+      "contentSize": "5061733",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-33-SP-PANORAMA.web.jpg",
+      "contentSize": "109972",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-33-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:33:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:33:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/2026-09-15-18-33-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-38-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-38-SP-PANORAMA.JPG",
+      "contentSize": "5056820",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-38-SP-PANORAMA.web.jpg",
+      "contentSize": "109243",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-38-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:38:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:38:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/2026-09-15-18-38-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-43-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-43-SP-PANORAMA.JPG",
+      "contentSize": "5090151",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-43-SP-PANORAMA.web.jpg",
+      "contentSize": "109030",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-43-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:43:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:43:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/2026-09-15-18-43-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-48-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-48-SP-PANORAMA.JPG",
+      "contentSize": "5071002",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-48-SP-PANORAMA.web.jpg",
+      "contentSize": "109574",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-48-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:48:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:48:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/2026-09-15-18-48-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-53-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-53-SP-PANORAMA.JPG",
+      "contentSize": "5117243",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-53-SP-PANORAMA.web.jpg",
+      "contentSize": "106251",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-53-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:53:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:53:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/2026-09-15-18-53-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-18-58-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-18-58-SP-PANORAMA.JPG",
+      "contentSize": "5128939",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-18-58-SP-PANORAMA.web.jpg",
+      "contentSize": "109016",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-18-58-SP-PANORAMA",
+      "dateCreated": "2026-09-15T18:58:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T18:58:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/2026-09-15-18-58-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-03-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-03-SP-PANORAMA.JPG",
+      "contentSize": "5110433",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-03-SP-PANORAMA.web.jpg",
+      "contentSize": "106906",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-03-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:03:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:03:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/2026-09-15-19-03-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-08-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-08-SP-PANORAMA.JPG",
+      "contentSize": "5005006",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-08-SP-PANORAMA.web.jpg",
+      "contentSize": "109570",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-08-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:08:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:08:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/2026-09-15-19-08-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-13-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-13-SP-PANORAMA.JPG",
+      "contentSize": "5117781",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-13-SP-PANORAMA.web.jpg",
+      "contentSize": "110304",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-13-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:13:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:13:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/2026-09-15-19-13-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-18-SP-PANORAMA.json",
+      "contentSize": "1760",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-18-SP-PANORAMA.JPG",
+      "contentSize": "5073084",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-18-SP-PANORAMA.web.jpg",
+      "contentSize": "111080",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-18-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:18:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:18:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/2026-09-15-19-18-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-23-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-23-SP-PANORAMA.JPG",
+      "contentSize": "5015261",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-23-SP-PANORAMA.web.jpg",
+      "contentSize": "111150",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-23-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:23:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:23:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/2026-09-15-19-23-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-28-SP-PANORAMA.json",
+      "contentSize": "1760",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-28-SP-PANORAMA.JPG",
+      "contentSize": "4858066",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-28-SP-PANORAMA.web.jpg",
+      "contentSize": "115923",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-28-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:28:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:28:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/2026-09-15-19-28-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-33-SP-PANORAMA.json",
+      "contentSize": "1762",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-33-SP-PANORAMA.JPG",
+      "contentSize": "4865860",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-33-SP-PANORAMA.web.jpg",
+      "contentSize": "117780",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-33-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:33:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:33:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/2026-09-15-19-33-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-38-SP-PANORAMA.json",
+      "contentSize": "1760",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-38-SP-PANORAMA.JPG",
+      "contentSize": "4935161",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-38-SP-PANORAMA.web.jpg",
+      "contentSize": "118840",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-38-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:38:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:38:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/2026-09-15-19-38-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-43-SP-PANORAMA.json",
+      "contentSize": "1760",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-43-SP-PANORAMA.JPG",
+      "contentSize": "4897118",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-43-SP-PANORAMA.web.jpg",
+      "contentSize": "116833",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-43-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:43:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:43:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/2026-09-15-19-43-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-48-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-48-SP-PANORAMA.JPG",
+      "contentSize": "4943681",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-48-SP-PANORAMA.web.jpg",
+      "contentSize": "118711",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-48-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:48:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:48:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/2026-09-15-19-48-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-53-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-53-SP-PANORAMA.JPG",
+      "contentSize": "4994658",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-53-SP-PANORAMA.web.jpg",
+      "contentSize": "120244",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-53-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:53:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:53:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/2026-09-15-19-53-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.json",
+      "@type": "File",
+      "name": "2026-09-15-19-58-SP-PANORAMA.json",
+      "contentSize": "1761",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "https://github.com/radiantearth/stac-spec/tree/v1.0.0"
+      },
+      "description": "STAC Item (JSON)."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.JPG",
+      "@type": "File",
+      "name": "2026-09-15-19-58-SP-PANORAMA.JPG",
+      "contentSize": "5028409",
+      "encodingFormat": "image/jpeg",
+      "description": "Original GoPro photo, untouched."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.web.jpg",
+      "@type": "File",
+      "name": "2026-09-15-19-58-SP-PANORAMA.web.jpg",
+      "contentSize": "123114",
+      "encodingFormat": "image/jpeg",
+      "description": "Web copy, 1600 px, levelled by camera:roll."
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/",
+      "@type": "Dataset",
+      "name": "2026-09-15-19-58-SP-PANORAMA",
+      "dateCreated": "2026-09-15T19:58:00-03:00",
+      "description": "Panorama photo taken 2026-09-15T19:58:00-03:00.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.JPG"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/2026-09-15-19-58-SP-PANORAMA.web.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "sp-panorama-2026-09-15/",
+      "@type": "Dataset",
+      "name": "São Paulo panorama, first collection",
+      "description": "GoPro HERO10 timelapse photos of the São Paulo skyline, one every 5 minutes.",
+      "spatialCoverage": {
+        "@id": "#place-sp-panorama-2026-09-15"
+      },
+      "temporalCoverage": "2026-09-15T17:58:00-03:00/2026-09-15T19:58:00-03:00",
+      "hasPart": [
+        {
+          "@id": "sp-panorama-2026-09-15/collection.json"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-17-58-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-03-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-08-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-13-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-18-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-23-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-28-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-33-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-38-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-43-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-48-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-53-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-18-58-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-03-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-08-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-13-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-18-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-23-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-28-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-33-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-38-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-43-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-48-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-53-SP-PANORAMA/"
+        },
+        {
+          "@id": "sp-panorama-2026-09-15/items/2026-09-15-19-58-SP-PANORAMA/"
+        }
+      ]
+    }
+  ]
+}
