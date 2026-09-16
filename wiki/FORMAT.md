@@ -11,6 +11,7 @@
 ## Web copy
 
 - 1600 px on the long side, JPEG quality 80, about 130 KB, no EXIF.
+- Rotated to cancel `camera:roll` and cropped to remove empty corners. Because of lens distortion, only the centre of the horizon is exactly level.
 - For viewing only. It can be regenerated from the original at any time.
 - Created by `make_stac.py`.
 
@@ -48,13 +49,21 @@ stac/
 | `properties.platform` / `instruments` | `GoPro HERO10 Black` / `gopro-hero10` | provenance |
 | `properties.license` / collection `license` | `CC0-1.0` | open data |
 | `assets.image` | original JPEG, role `data` | the archive master |
-| `assets.overview` | web copy, roles `overview`, `visual` | fast viewing |
+| `assets.overview` | web copy, roles `overview`, `visual`, levelled by `camera:roll` | fast viewing |
+| `pers:perspective_center` / `pers:crs` | camera lon, lat, altitude / `4979` | [perspective-imagery](https://github.com/stac-extensions/perspective-imagery) extension |
+| `gopro:gravity_vector` | `[x, y, z]` from the GoPro `GravityVector` tag (accelerometer) | raw tilt record |
+| `camera:roll` / `camera:pitch` | degrees, `atan2(x, y)` / `atan2(z, y)` | tilt, to level images and spot when the camera moved |
 
 Planned fields (not written yet):
 
 - exposure settings copied from EXIF, such as `exposure_time`, `iso` and `white_balance`, so frames can be filtered by them
 - `sun_elevation`, to split day, twilight and night without guessing
 - per-frame metrics: mean brightness, sky brightness, cloud cover
+
+Why custom `camera:` and `gopro:` fields: `pers:rotation_matrix` needs the full orientation, including heading, and the camera doesn't record heading.
+Existing extensions are used wherever they fit.
+
+Future: registering each frame against a reference frame (OpenCV) to catch panning and shifts, which gravity can't detect.
 
 ## Collections
 

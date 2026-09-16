@@ -43,4 +43,6 @@ Write the settings in the collection description.
 - **Power:** runs longer than a few hours need external USB power.
 - **Storage:** 5 MB × 288 a day is about 1.5 GB a day, so a 128 GB card lasts about 80 days. Offload well before that.
 - **Clock:** file names come from the camera clock. In the first collection it ran ~1 min off GPS time; check it at every offload.
+- **Tilt:** every photo records a gravity vector, so a bump shows up in the data. On 2026-09-15 the camera went from −1.1° to −4.8° roll between the first and second frames, then held steady within ±0.1°.
+  Level the camera at deployment anyway. The gravity vector comes from the accelerometer, so it should survive turning GPS off (check with one test photo).
 - **Lens:** check for condensation, dirt and insects. Keep the framing identical between visits.
