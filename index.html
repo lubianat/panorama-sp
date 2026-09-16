@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SP Panorama</title>
+<style>
+  body { margin: 0; background: #111; color: #eee; font: 16px system-ui, sans-serif; text-align: center; }
+  nav { padding: 8px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  button, input { font: inherit; padding: 4px 10px; }
+  h1 { font-size: 1.2rem; margin: 8px; font-variant-numeric: tabular-nums; }
+  img { max-width: 100%; max-height: calc(100vh - 140px); }
+  small { color: #fa0; min-width: 6em; }
+</style>
+</head>
+<body>
+<h1 id="ts">loading…</h1>
+<nav>
+  <small id="gapL"></small>
+  <button id="dayP" title="Previous day (Shift+←)">◀◀ day</button>
+  <button id="prev" title="Previous (←)">◀</button>
+  <input type="datetime-local" id="pick">
+  <button id="next" title="Next (→)">▶</button>
+  <button id="dayN" title="Next day (Shift+→)">day ▶▶</button>
+  <small id="gapR"></small>
+</nav>
+<a id="full" target="_blank"><img id="img" alt="São Paulo panorama"></a>
+<p><a id="fulltxt" style="color:#9cf" target="_blank">full resolution</a> · <a href="stac/catalog.json" id="stac" style="color:#9cf">STAC catalog</a> · CC0</p>
+<script>
+const BASE = 'stac/';  // switch to the remote STAC root (e.g. an HF bucket URL) when hosted
+const $ = id => document.getElementById(id);
+const base = p => p.split('/').pop();  // item path -> timestamped name
+const toDate = n => { const [y, mo, d, h, mi] = n.split('-').map(Number); return new Date(y, mo - 1, d, h, mi); };
+const human = ms => { const m = ms / 6e4; return m < 120 ? `${Math.round(m)} min` : m < 2880 ? `${Math.round(m / 60)} h` : `${Math.round(m / 1440)} days`; };
+let paths = [], names = [], times = [], i = 0;
+
+// index of the image closest to time t (binary search)
+function closest(t) {
+  let lo = 0, hi = times.length - 1;
+  while (lo < hi) { const mid = (lo + hi) >> 1; times[mid] < t ? lo = mid + 1 : hi = mid; }
+  return lo > 0 && t - times[lo - 1] < times[lo] - t ? lo - 1 : lo;
+}
+
+function show(k) {
+  i = Math.max(0, Math.min(names.length - 1, k));
+  const n = names[i];
+  $('img').src = BASE + paths[i] + '.web.jpg';
+  $('full').href = $('fulltxt').href = BASE + paths[i] + '.JPG';
+  $('ts').textContent = n.slice(0, 10) + ' ' + n.slice(11, 16).replace('-', ':');
+  $('pick').value = n.slice(0, 10) + 'T' + n.slice(11, 16).replace('-', ':');
+  history.replaceState(null, '', '#' + n.slice(0, 16));
+  const gap = j => (j >= 0 && j < times.length && Math.abs(times[j] - times[i]) > 10 * 6e4) ? 'gap: ' + human(Math.abs(times[j] - times[i])) : '';
+  $('gapL').textContent = gap(i - 1);
+  $('gapR').textContent = gap(i + 1);
+}
+
+// same time of day on the nearest earlier/later day that has images
+function dayJump(dir) {
+  const t = new Date(times[i]); t.setDate(t.getDate() + dir);
+  let k = closest(t);
+  if (dir > 0 && times[k] <= times[i]) k = i + 1;   // no later day: just step
+  if (dir < 0 && times[k] >= times[i]) k = i - 1;
+  show(k);
+}
+
+$('prev').onclick = () => show(i - 1);
+$('next').onclick = () => show(i + 1);
+$('dayP').onclick = () => dayJump(-1);
+$('dayN').onclick = () => dayJump(1);
+$('pick').onchange = e => e.target.value && show(closest(new Date(e.target.value)));
+onkeydown = e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'ArrowLeft') e.shiftKey ? dayJump(-1) : show(i - 1);
+  if (e.key === 'ArrowRight') e.shiftKey ? dayJump(1) : show(i + 1);
+};
+
+$('stac').href = BASE + 'catalog.json';
+fetch(BASE + 'images.json').then(r => r.json()).then(list => {
+  paths = list; names = list.map(base); times = names.map(toDate);
+  if (!names.length) return $('ts').textContent = 'no images';
+  const h = location.hash.slice(1);
+  show(h ? closest(toDate(h)) : names.length - 1);   // default: latest
+});
+</script>
+</body>
+</html>
