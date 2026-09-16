@@ -1,0 +1,4 @@
+# originals are ~5 MB each; they live on the data host, not in git (see wiki/HOSTING.md)
+*.JPG
+__marimo__/
+__pycache__/
