@@ -65,7 +65,9 @@
   <button class="close" onclick="infoDlg.close()">✕</button>
   <h2>SP Panorama</h2>
   <p>A photo of the São Paulo skyline every 5 minutes.</p>
-  <p><a id="fulltxt" target="_blank">Full resolution photo</a></p>
+  <p><label><input type="checkbox" id="hires"> High resolution mode</label><br>
+     <small>Shows the 5 MB originals instead of the 1600 px web copies. Slow, and only where the originals are hosted.</small></p>
+  <p><a id="fulltxt" target="_blank">This photo, full resolution</a></p>
   <p><a id="stac" target="_blank">STAC catalog</a></p>
   <p><a href="https://github.com/lubianat/panorama-sp" target="_blank">github.com/lubianat/panorama-sp</a></p>
   <p>Photos released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.</p>
@@ -89,7 +91,7 @@ function closest(t) {
 function show(k) {
   i = Math.max(0, Math.min(names.length - 1, k));
   const n = names[i];                       // YYYY-MM-DD-HH-MM-...
-  $('img').src = BASE + paths[i] + '.web.jpg';
+  $('img').src = BASE + paths[i] + ($('hires').checked ? '.JPG' : '.web.jpg');
   $('full').href = $('fulltxt').href = BASE + paths[i] + '.JPG';
   $('ts').textContent = `${n.slice(8, 10)}-${n.slice(5, 7)}-${n.slice(2, 4)} ${n.slice(11, 13)}:${n.slice(14, 16)}`;
   $('pick').value = n.slice(0, 10) + 'T' + n.slice(11, 16).replace('-', ':');
@@ -132,6 +134,13 @@ onkeydown = e => {
   if (e.key === 'ArrowLeft') e.shiftKey ? dayJump(-1) : show(i - 1);
   if (e.key === 'ArrowRight') e.shiftKey ? dayJump(1) : show(i + 1);
   if (e.key === ' ') { e.preventDefault(); playPause(); }
+};
+
+// remembered per browser; storage can throw in private windows
+try { $('hires').checked = localStorage.hires === '1'; } catch {}
+$('hires').onchange = e => {
+  try { localStorage.hires = e.target.checked ? '1' : '0'; } catch {}
+  show(i);
 };
 
 $('stac').href = BASE + 'catalog.json';
