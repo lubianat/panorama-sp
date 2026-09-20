@@ -182,7 +182,7 @@ fetch(BASE + 'images.json').then(r => r.json()).then(list => {
     $('days').append(b);
   }
   const h = location.hash.slice(1);
-  show(h ? closest(toDate(h)) : names.length - 1);   // default: latest
+  show(h ? closest(toDate(h)) : 0);   // default: the oldest photo, so playing runs forwards in time
 });
 </script>
 </body>

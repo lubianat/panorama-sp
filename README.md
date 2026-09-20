@@ -1,5 +1,9 @@
 # SP Panorama
 
+Note: PILOT PHASE
+
+Still figuring out the full workflow (hardware and software).
+
 A long-running photo panorama of São Paulo. A GoPro HERO10 takes one photo every 5 minutes.
 The photos are published as a static STAC catalog, with a tiny web viewer and a notebook to browse them.
 The data is released under **CC0**.
