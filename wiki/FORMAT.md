@@ -31,14 +31,16 @@ stac/
   images.json                      viewer photo list (paths relative to stac/)
   <collection>/
     collection.json
-    items/<id>/<id>.JPG            original
-    items/<id>/<id>.web.jpg        web copy
-    items/<id>/<id>.json           STAC item
+    <YYYY-MM-DD>/catalog.json            one sub-catalog per day
+    <YYYY-MM-DD>/items/<id>/<id>.JPG     original
+    <YYYY-MM-DD>/items/<id>/<id>.web.jpg web copy
+    <YYYY-MM-DD>/items/<id>/<id>.json    STAC item
 ```
 
 - Every href is relative, so the `stac/` folder can be uploaded to any host unchanged.
-- **Scale limit:** a year at 5 minutes means ~105k folders under one `items/`, and hosts such as HF advise at most 10k entries per folder.
-  When that matters, use `items/YYYY/MM/DD/<id>/` or one collection per month.
+- The collection links to day catalogs (`child`), and each day catalog links to its photos (`item`).
+- Splitting by day keeps each folder small: at 5 minutes a day holds at most 288 photo folders, well under the ~10k per folder that hosts such as HF advise.
+  A year adds 365 day folders to the collection, which is fine.
 
 ## STAC fields
 
@@ -67,7 +69,7 @@ Future: registering each frame against a reference frame (OpenCV) to catch panni
 
 ## Collections
 
-- One collection per deployment, meaning a fixed camera position and fixed settings.
+- One collection per deployment, meaning a fixed camera position and fixed settings. Photos inside it are grouped into one sub-catalog per day.
 - The ID is `sp-panorama-<start-date>`.
 - The collection description records the camera settings and anything notable about the site.
 
