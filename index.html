@@ -8,8 +8,10 @@
   :root { color-scheme: dark; }
   body { margin: 0; background: #000; color: #eee; font: 16px system-ui, sans-serif;
          height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  #full { position: relative; display: inline-block; line-height: 0; }   /* anchors the date stamp to the photo */
+  #full { position: relative; display: inline-block; line-height: 0; overflow: hidden; }  /* anchors and clips the photo */
   img { max-width: 100vw; max-height: 100vh; display: block; }
+  #note { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 6px;
+          font-size: 13px; line-height: 1.4; color: #fa0; background: rgba(0,0,0,.6); }
 
   /* date stamp, like an old camera */
   #ts { position: absolute; right: 2.5%; top: 3%; margin: 0; pointer-events: none;
@@ -40,7 +42,7 @@
 </style>
 </head>
 <body>
-<a id="full" target="_blank"><img id="img" alt="São Paulo panorama"><p id="ts">loading…</p></a>
+<a id="full" target="_blank"><img id="img" alt="São Paulo panorama"><p id="ts">loading…</p><p id="note" hidden></p></a>
 
 <nav>
   <span class="gap" id="gapL"></span>
@@ -66,7 +68,9 @@
   <h2>SP Panorama</h2>
   <p>A photo of the São Paulo skyline every 5 minutes.</p>
   <p><label><input type="checkbox" id="hires"> High resolution mode</label><br>
-     <small>Shows the 5 MB originals instead of the 1600 px web copies. Slow, and only where the originals are hosted.</small></p>
+     <small>Shows the 5 MB originals instead of the 1600 px web copies, levelled in the browser.
+     Slow, and only where the originals are hosted: on GitHub Pages the viewer falls back to the web copy.
+     Share it with <code>?hires=1</code> in the link.</small></p>
   <p><a id="fulltxt" target="_blank">This photo, full resolution</a></p>
   <p><a id="stac" target="_blank">STAC catalog</a></p>
   <p><a href="https://github.com/lubianat/panorama-sp" target="_blank">github.com/lubianat/panorama-sp</a></p>
@@ -79,7 +83,17 @@ const $ = id => document.getElementById(id);
 const base = p => p.split('/').pop();  // item path -> timestamped name
 const toDate = n => { const [y, mo, d, h, mi] = n.split('-').map(Number); return new Date(y, mo - 1, d, h, mi); };
 const human = ms => { const m = ms / 6e4; return m < 120 ? `${Math.round(m)} min` : m < 2880 ? `${Math.round(m / 60)} h` : `${Math.round(m / 1440)} days`; };
-let paths = [], names = [], times = [], i = 0;
+let paths = [], rolls = [], names = [], times = [], i = 0;
+const hires = () => $('hires').checked;
+
+// originals are not levelled (only the web copies are), so rotate them in the browser
+function levelImg() {
+  const im = $('img'), roll = rolls[i];
+  if (!hires() || !roll || !im.naturalWidth) return im.style.transform = '';
+  const a = Math.abs(roll) * Math.PI / 180, W = im.naturalWidth, H = im.naturalHeight;
+  const s = Math.min(W / (W * Math.cos(a) + H * Math.sin(a)), H / (W * Math.sin(a) + H * Math.cos(a)));
+  im.style.transform = `rotate(${-roll}deg) scale(${1 / s})`;   // scale up so the corners stay covered
+}
 
 // index of the image closest to time t (binary search)
 function closest(t) {
@@ -91,11 +105,12 @@ function closest(t) {
 function show(k) {
   i = Math.max(0, Math.min(names.length - 1, k));
   const n = names[i];                       // YYYY-MM-DD-HH-MM-...
-  $('img').src = BASE + paths[i] + ($('hires').checked ? '.JPG' : '.web.jpg');
+  $('img').src = BASE + paths[i] + (hires() ? '.JPG' : '.web.jpg');
+  $('note').hidden = true;
   $('full').href = $('fulltxt').href = BASE + paths[i] + '.JPG';
   $('ts').textContent = `${n.slice(8, 10)}-${n.slice(5, 7)}-${n.slice(2, 4)} ${n.slice(11, 13)}:${n.slice(14, 16)}`;
   $('pick').value = n.slice(0, 10) + 'T' + n.slice(11, 16).replace('-', ':');
-  history.replaceState(null, '', '#' + n.slice(0, 16));
+  history.replaceState(null, '', (hires() ? '?hires=1' : location.pathname) + '#' + n.slice(0, 16));
   const gap = j => (j >= 0 && j < times.length && Math.abs(times[j] - times[i]) > 10 * 6e4) ? 'gap ' + human(Math.abs(times[j] - times[i])) : '';
   $('gapL').textContent = gap(i - 1);
   $('gapR').textContent = gap(i + 1);
@@ -136,16 +151,28 @@ onkeydown = e => {
   if (e.key === ' ') { e.preventDefault(); playPause(); }
 };
 
-// remembered per browser; storage can throw in private windows
-try { $('hires').checked = localStorage.hires === '1'; } catch {}
+$('img').onload = levelImg;
+// originals may not be published (GitHub Pages hosts only the web copies): fall back instead of showing nothing
+$('img').onerror = () => {
+  if (!hires()) return;
+  $('img').style.transform = '';
+  $('img').src = BASE + paths[i] + '.web.jpg';
+  $('note').textContent = 'Original not available here, showing the web copy. See the ? window.';
+  $('note').hidden = false;
+};
+
+// on by ?hires=1 in the URL, otherwise remembered per browser (storage can throw in private windows)
+const shared = new URLSearchParams(location.search).get('hires');
+try { $('hires').checked = shared !== null ? shared === '1' : localStorage.hires === '1'; } catch { $('hires').checked = shared === '1'; }
 $('hires').onchange = e => {
   try { localStorage.hires = e.target.checked ? '1' : '0'; } catch {}
+  history.replaceState(null, '', (e.target.checked ? '?hires=1' : location.pathname) + location.hash);
   show(i);
 };
 
 $('stac').href = BASE + 'catalog.json';
 fetch(BASE + 'images.json').then(r => r.json()).then(list => {
-  paths = list; names = list.map(base); times = names.map(toDate);
+  paths = list.map(e => e[0]); rolls = list.map(e => e[1]); names = paths.map(base); times = names.map(toDate);
   if (!names.length) return $('ts').textContent = 'no photos';
   for (const day of [...new Set(names.map(n => n.slice(0, 10)))]) {   // one button per day with photos
     const b = document.createElement('button');
