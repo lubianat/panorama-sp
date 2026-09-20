@@ -1,0 +1,443 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.0.0",
+  "id": "sp-panorama-2026-09-15-2026-09-16",
+  "description": "Photos taken on 2026-09-16.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-24-SP-PANORAMA/2026-09-16-06-24-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-29-SP-PANORAMA/2026-09-16-06-29-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-34-SP-PANORAMA/2026-09-16-06-34-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-39-SP-PANORAMA/2026-09-16-06-39-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-44-SP-PANORAMA/2026-09-16-06-44-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-49-SP-PANORAMA/2026-09-16-06-49-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-54-SP-PANORAMA/2026-09-16-06-54-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-06-59-SP-PANORAMA/2026-09-16-06-59-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-04-SP-PANORAMA/2026-09-16-07-04-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-09-SP-PANORAMA/2026-09-16-07-09-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-14-SP-PANORAMA/2026-09-16-07-14-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-19-SP-PANORAMA/2026-09-16-07-19-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-24-SP-PANORAMA/2026-09-16-07-24-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-29-SP-PANORAMA/2026-09-16-07-29-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-34-SP-PANORAMA/2026-09-16-07-34-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-39-SP-PANORAMA/2026-09-16-07-39-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-44-SP-PANORAMA/2026-09-16-07-44-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-49-SP-PANORAMA/2026-09-16-07-49-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-54-SP-PANORAMA/2026-09-16-07-54-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-07-59-SP-PANORAMA/2026-09-16-07-59-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-04-SP-PANORAMA/2026-09-16-08-04-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-09-SP-PANORAMA/2026-09-16-08-09-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-14-SP-PANORAMA/2026-09-16-08-14-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-19-SP-PANORAMA/2026-09-16-08-19-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-24-SP-PANORAMA/2026-09-16-08-24-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-29-SP-PANORAMA/2026-09-16-08-29-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-08-34-SP-PANORAMA/2026-09-16-08-34-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-12-46-SP-PANORAMA/2026-09-16-12-46-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-12-51-SP-PANORAMA/2026-09-16-12-51-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-12-56-SP-PANORAMA/2026-09-16-12-56-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-01-SP-PANORAMA/2026-09-16-13-01-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-06-SP-PANORAMA/2026-09-16-13-06-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-11-SP-PANORAMA/2026-09-16-13-11-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-16-SP-PANORAMA/2026-09-16-13-16-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-21-SP-PANORAMA/2026-09-16-13-21-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-26-SP-PANORAMA/2026-09-16-13-26-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-31-SP-PANORAMA/2026-09-16-13-31-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-36-SP-PANORAMA/2026-09-16-13-36-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-41-SP-PANORAMA/2026-09-16-13-41-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-46-SP-PANORAMA/2026-09-16-13-46-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-51-SP-PANORAMA/2026-09-16-13-51-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-13-56-SP-PANORAMA/2026-09-16-13-56-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-01-SP-PANORAMA/2026-09-16-14-01-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-06-SP-PANORAMA/2026-09-16-14-06-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-11-SP-PANORAMA/2026-09-16-14-11-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-16-SP-PANORAMA/2026-09-16-14-16-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-21-SP-PANORAMA/2026-09-16-14-21-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-26-SP-PANORAMA/2026-09-16-14-26-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-31-SP-PANORAMA/2026-09-16-14-31-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-36-SP-PANORAMA/2026-09-16-14-36-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-41-SP-PANORAMA/2026-09-16-14-41-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-46-SP-PANORAMA/2026-09-16-14-46-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-51-SP-PANORAMA/2026-09-16-14-51-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-14-56-SP-PANORAMA/2026-09-16-14-56-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-15-01-SP-PANORAMA/2026-09-16-15-01-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-15-06-SP-PANORAMA/2026-09-16-15-06-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-03-SP-PANORAMA/2026-09-16-17-03-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-08-SP-PANORAMA/2026-09-16-17-08-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-13-SP-PANORAMA/2026-09-16-17-13-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-18-SP-PANORAMA/2026-09-16-17-18-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-23-SP-PANORAMA/2026-09-16-17-23-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-28-SP-PANORAMA/2026-09-16-17-28-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-33-SP-PANORAMA/2026-09-16-17-33-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-38-SP-PANORAMA/2026-09-16-17-38-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-43-SP-PANORAMA/2026-09-16-17-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-48-SP-PANORAMA/2026-09-16-17-48-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-53-SP-PANORAMA/2026-09-16-17-53-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-17-58-SP-PANORAMA/2026-09-16-17-58-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-03-SP-PANORAMA/2026-09-16-18-03-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-08-SP-PANORAMA/2026-09-16-18-08-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-13-SP-PANORAMA/2026-09-16-18-13-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-18-SP-PANORAMA/2026-09-16-18-18-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-23-SP-PANORAMA/2026-09-16-18-23-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-28-SP-PANORAMA/2026-09-16-18-28-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-33-SP-PANORAMA/2026-09-16-18-33-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-38-SP-PANORAMA/2026-09-16-18-38-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-43-SP-PANORAMA/2026-09-16-18-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-48-SP-PANORAMA/2026-09-16-18-48-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-18-53-SP-PANORAMA/2026-09-16-18-53-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-19-03-SP-PANORAMA/2026-09-16-19-03-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-20-39-SP-PANORAMA/2026-09-16-20-39-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-21-43-SP-PANORAMA/2026-09-16-21-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-22-13-SP-PANORAMA/2026-09-16-22-13-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "items/2026-09-16-22-43-SP-PANORAMA/2026-09-16-22-43-SP-PANORAMA.json",
+      "type": "application/geo+json"
+    }
+  ]
+}
