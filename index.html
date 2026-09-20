@@ -5,27 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SP Panorama</title>
 <style>
-  body { margin: 0; background: #111; color: #eee; font: 16px system-ui, sans-serif; text-align: center; }
-  nav { padding: 8px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; align-items: center; }
-  button, input { font: inherit; padding: 4px 10px; }
-  h1 { font-size: 1.2rem; margin: 8px; font-variant-numeric: tabular-nums; }
-  img { max-width: 100%; max-height: calc(100vh - 140px); }
-  small { color: #fa0; min-width: 6em; }
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #000; color: #eee; font: 16px system-ui, sans-serif;
+         height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  img { max-width: 100vw; max-height: 100vh; display: block; }
+
+  /* date stamp, like an old camera */
+  #ts { position: fixed; right: 16px; bottom: 14px; margin: 0; pointer-events: none;
+        font: 700 clamp(15px, 2.6vw, 26px)/1 "DSEG7", "Courier New", monospace; letter-spacing: 1px;
+        color: #ff9d2e; text-shadow: 0 0 6px rgba(255,120,0,.65), 0 1px 2px rgba(0,0,0,.9); }
+
+  nav { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%);
+        display: flex; gap: 4px; align-items: center; padding: 4px;
+        background: rgba(20,20,20,.45); backdrop-filter: blur(6px); border-radius: 999px; }
+  nav:hover, nav:focus-within { background: rgba(20,20,20,.75); }
+  button { font: inherit; color: #eee; background: none; border: 0; border-radius: 999px;
+           padding: 6px 12px; cursor: pointer; line-height: 1; }
+  button:hover { background: rgba(255,255,255,.15); }
+  .gap { font-size: 12px; color: #fa0; padding: 0 4px; white-space: nowrap; }
+
+  dialog { border: 0; border-radius: 12px; background: #1b1b1b; color: #eee; padding: 20px 24px; max-width: 90vw; }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  dialog h2 { margin: 0 0 12px; font-size: 1.1rem; }
+  dialog a { color: #9cf; }
+  dialog p { margin: 8px 0; }
+  input { font: inherit; padding: 6px; }
+  .days { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; max-width: 28em; }
+  .days button { background: rgba(255,255,255,.1); padding: 5px 10px; font-size: 14px; }
+  .close { position: absolute; top: 8px; right: 10px; }
 </style>
 </head>
 <body>
-<h1 id="ts">loading…</h1>
-<nav>
-  <small id="gapL"></small>
-  <button id="dayP" title="Previous day (Shift+←)">◀◀ day</button>
-  <button id="prev" title="Previous (←)">◀</button>
-  <input type="datetime-local" id="pick">
-  <button id="next" title="Next (→)">▶</button>
-  <button id="dayN" title="Next day (Shift+→)">day ▶▶</button>
-  <small id="gapR"></small>
-</nav>
 <a id="full" target="_blank"><img id="img" alt="São Paulo panorama"></a>
-<p><a id="fulltxt" style="color:#9cf" target="_blank">full resolution</a> · <a href="stac/catalog.json" id="stac" style="color:#9cf">STAC catalog</a> · CC0</p>
+<p id="ts">loading…</p>
+
+<nav>
+  <span class="gap" id="gapL"></span>
+  <button id="dayP" title="Previous day (Shift+←)">◀◀</button>
+  <button id="prev" title="Previous photo (←)">◀</button>
+  <button id="cal" title="Pick a date">🗓</button>
+  <button id="next" title="Next photo (→)">▶</button>
+  <button id="dayN" title="Next day (Shift+→)">▶▶</button>
+  <button id="info" title="About">?</button>
+  <span class="gap" id="gapR"></span>
+</nav>
+
+<dialog id="calDlg">
+  <button class="close" onclick="calDlg.close()">✕</button>
+  <h2>Go to a date</h2>
+  <input type="datetime-local" id="pick">
+  <div class="days" id="days"></div>
+</dialog>
+
+<dialog id="infoDlg">
+  <button class="close" onclick="infoDlg.close()">✕</button>
+  <h2>SP Panorama</h2>
+  <p>A photo of the São Paulo skyline every 5 minutes.</p>
+  <p><a id="fulltxt" target="_blank">Full resolution photo</a></p>
+  <p><a id="stac" target="_blank">STAC catalog</a></p>
+  <p><a href="https://github.com/lubianat/panorama-sp" target="_blank">github.com/lubianat/panorama-sp</a></p>
+  <p>Photos released under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a>.</p>
+</dialog>
+
 <script>
 const BASE = 'stac/';  // switch to the remote STAC root (e.g. an HF bucket URL) when hosted
 const $ = id => document.getElementById(id);
@@ -43,13 +84,13 @@ function closest(t) {
 
 function show(k) {
   i = Math.max(0, Math.min(names.length - 1, k));
-  const n = names[i];
+  const n = names[i];                       // YYYY-MM-DD-HH-MM-...
   $('img').src = BASE + paths[i] + '.web.jpg';
   $('full').href = $('fulltxt').href = BASE + paths[i] + '.JPG';
-  $('ts').textContent = n.slice(0, 10) + ' ' + n.slice(11, 16).replace('-', ':');
+  $('ts').textContent = `${n.slice(8, 10)}-${n.slice(5, 7)}-${n.slice(2, 4)} ${n.slice(11, 13)}:${n.slice(14, 16)}`;
   $('pick').value = n.slice(0, 10) + 'T' + n.slice(11, 16).replace('-', ':');
   history.replaceState(null, '', '#' + n.slice(0, 16));
-  const gap = j => (j >= 0 && j < times.length && Math.abs(times[j] - times[i]) > 10 * 6e4) ? 'gap: ' + human(Math.abs(times[j] - times[i])) : '';
+  const gap = j => (j >= 0 && j < times.length && Math.abs(times[j] - times[i]) > 10 * 6e4) ? 'gap ' + human(Math.abs(times[j] - times[i])) : '';
   $('gapL').textContent = gap(i - 1);
   $('gapR').textContent = gap(i + 1);
 }
@@ -67,7 +108,9 @@ $('prev').onclick = () => show(i - 1);
 $('next').onclick = () => show(i + 1);
 $('dayP').onclick = () => dayJump(-1);
 $('dayN').onclick = () => dayJump(1);
-$('pick').onchange = e => e.target.value && show(closest(new Date(e.target.value)));
+$('cal').onclick = () => calDlg.showModal();
+$('info').onclick = () => infoDlg.showModal();
+$('pick').onchange = e => { if (e.target.value) { show(closest(new Date(e.target.value))); calDlg.close(); } };
 onkeydown = e => {
   if (e.target.tagName === 'INPUT') return;
   if (e.key === 'ArrowLeft') e.shiftKey ? dayJump(-1) : show(i - 1);
@@ -77,7 +120,13 @@ onkeydown = e => {
 $('stac').href = BASE + 'catalog.json';
 fetch(BASE + 'images.json').then(r => r.json()).then(list => {
   paths = list; names = list.map(base); times = names.map(toDate);
-  if (!names.length) return $('ts').textContent = 'no images';
+  if (!names.length) return $('ts').textContent = 'no photos';
+  for (const day of [...new Set(names.map(n => n.slice(0, 10)))]) {   // one button per day with photos
+    const b = document.createElement('button');
+    b.textContent = `${day.slice(8)}-${day.slice(5, 7)}`;
+    b.onclick = () => { show(closest(toDate(day + '-12-00'))); calDlg.close(); };
+    $('days').append(b);
+  }
   const h = location.hash.slice(1);
   show(h ? closest(toDate(h)) : names.length - 1);   // default: latest
 });
