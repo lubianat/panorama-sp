@@ -43,9 +43,10 @@
   <span class="gap" id="gapL"></span>
   <button id="dayP" title="Previous day (Shift+←)">◀◀</button>
   <button id="prev" title="Previous photo (←)">◀</button>
-  <button id="cal" title="Pick a date">🗓</button>
+  <button id="play" title="Play (space)">▶︎</button>
   <button id="next" title="Next photo (→)">▶</button>
   <button id="dayN" title="Next day (Shift+→)">▶▶</button>
+  <button id="cal" title="Pick a date">🗓</button>
   <button id="info" title="About">?</button>
   <span class="gap" id="gapR"></span>
 </nav>
@@ -95,15 +96,27 @@ function show(k) {
   $('gapR').textContent = gap(i + 1);
 }
 
-// same time of day on the nearest earlier/later day that has images
+// nearest time of day on the next/previous day that has photos (days can be missing, spacing is irregular)
 function dayJump(dir) {
-  const t = new Date(times[i]); t.setDate(t.getDate() + dir);
-  let k = closest(t);
-  if (dir > 0 && times[k] <= times[i]) k = i + 1;   // no later day: just step
-  if (dir < 0 && times[k] >= times[i]) k = i - 1;
-  show(k);
+  const day = names[i].slice(0, 10);
+  let k = i;
+  while (k + dir >= 0 && k + dir < names.length && names[k + dir].slice(0, 10) === day) k += dir;
+  k += dir;                                  // first photo of the neighbouring day with photos
+  if (k < 0 || k >= names.length) return;    // already at the first/last day
+  const target = names[k].slice(0, 10) + names[i].slice(10, 16);   // same clock time, that day
+  const j = closest(toDate(target));
+  show(names[j].slice(0, 10) === names[k].slice(0, 10) ? j : k);   // stay inside that day
 }
 
+let timer = null;
+function playPause() {
+  if (timer) { clearInterval(timer); timer = null; }
+  else timer = setInterval(() => (i + 1 < names.length ? show(i + 1) : playPause()), 400);
+  $('play').textContent = timer ? '❚❚' : '▶︎';
+  $('play').title = timer ? 'Pause (space)' : 'Play (space)';
+}
+
+$('play').onclick = playPause;
 $('prev').onclick = () => show(i - 1);
 $('next').onclick = () => show(i + 1);
 $('dayP').onclick = () => dayJump(-1);
@@ -115,6 +128,7 @@ onkeydown = e => {
   if (e.target.tagName === 'INPUT') return;
   if (e.key === 'ArrowLeft') e.shiftKey ? dayJump(-1) : show(i - 1);
   if (e.key === 'ArrowRight') e.shiftKey ? dayJump(1) : show(i + 1);
+  if (e.key === ' ') { e.preventDefault(); playPause(); }
 };
 
 $('stac').href = BASE + 'catalog.json';
