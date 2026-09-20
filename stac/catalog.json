@@ -13,12 +13,6 @@
       "rel": "child",
       "href": "sp-panorama-2026-09-15/collection.json",
       "type": "application/json"
-    },
-    {
-      "rel": "describedby",
-      "href": "ro-crate-metadata.json",
-      "type": "application/ld+json",
-      "title": "RO-Crate metadata"
     }
   ]
 }

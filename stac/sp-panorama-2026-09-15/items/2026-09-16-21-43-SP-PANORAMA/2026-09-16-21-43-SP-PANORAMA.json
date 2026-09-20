@@ -1,0 +1,84 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/perspective-imagery/v1.0.0/schema.json"
+  ],
+  "id": "2026-09-16-21-43-SP-PANORAMA",
+  "collection": "sp-panorama-2026-09-15",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -46.728094,
+      -23.568747,
+      820.9
+    ]
+  },
+  "bbox": [
+    -46.728094,
+    -23.568747,
+    -46.728094,
+    -23.568747
+  ],
+  "properties": {
+    "datetime": "2026-09-16T21:43:00-03:00",
+    "platform": "GoPro HERO10 Black",
+    "instruments": [
+      "gopro-hero10"
+    ],
+    "license": "CC0-1.0",
+    "pers:perspective_center": [
+      -46.728094,
+      -23.568747,
+      820.9
+    ],
+    "pers:crs": 4979,
+    "gopro:gravity_vector": [
+      -0.0472731702029705,
+      0.99777215719223,
+      -0.0465407259762287
+    ],
+    "camera:roll": -2.71,
+    "camera:pitch": -2.67
+  },
+  "assets": {
+    "image": {
+      "href": "2026-09-16-21-43-SP-PANORAMA.JPG",
+      "type": "image/jpeg",
+      "title": "Original photo",
+      "roles": [
+        "data"
+      ]
+    },
+    "overview": {
+      "href": "2026-09-16-21-43-SP-PANORAMA.web.jpg",
+      "type": "image/jpeg",
+      "title": "Web copy (1600px, levelled by camera:roll)",
+      "roles": [
+        "overview",
+        "visual"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}
