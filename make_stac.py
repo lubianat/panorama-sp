@@ -8,7 +8,7 @@ from PIL import Image
 ROOT = Path(__file__).parent
 DATA, STAC = ROOT / "data", ROOT / "stac"
 COLLECTION = "sp-panorama-2026-09-15"
-ITEMS = STAC / COLLECTION / "items"
+COLL = STAC / COLLECTION
 # ponytail: hardcoded for collection 1 (from EXIF: 23°34'7.49"S 46°43'41.14"W, 820.9 m); per-collection later
 LON, LAT, ALT = -46.728094, -23.568747, 820.9
 TZ = timezone(timedelta(hours=-3))  # camera clock = São Paulo local time
@@ -32,7 +32,7 @@ def write(path, obj):
 def ingest():
     """Move renamed originals from data/ into stac/<collection>/items/<id>/ (never overwrites)."""
     for f in sorted(DATA.glob("*-SP-PANORAMA*.JPG")):
-        dest = ITEMS / f.stem / f.name
+        dest = COLL / f.stem[:10] / "items" / f.stem / f.name  # one sub-catalog per day
         if dest.exists():
             print(f"skip, already in catalog: {f.name}")
             continue
@@ -107,20 +107,32 @@ def item(jpg, g):
                          "title": "Web copy (1600px, levelled by camera:roll)",
                          "roles": ["overview", "visual"]},
         },
-        "links": [{"rel": "collection", "href": "../../collection.json", "type": JSON_T},
-                  {"rel": "parent", "href": "../../collection.json", "type": JSON_T},
-                  {"rel": "root", "href": "../../../catalog.json", "type": JSON_T},
+        "links": [{"rel": "collection", "href": "../../../collection.json", "type": JSON_T},
+                  {"rel": "parent", "href": "../../catalog.json", "type": JSON_T},
+                  {"rel": "root", "href": "../../../../catalog.json", "type": JSON_T},
                   {"rel": "license", "href": CC0}],
     }
 
 
 def main():
     ingest()
-    jpgs = sorted(ITEMS.glob("*/*-SP-PANORAMA*.JPG"))
+    jpgs = sorted(COLL.glob("*/items/*/*-SP-PANORAMA*.JPG"))
     grav = gravity(jpgs)
     for j in jpgs:
         write(j.with_suffix(".json"), item(j, grav.get(j)))
     times = [parse(j.stem) for j in jpgs]
+    days = {}
+    for j in jpgs:
+        days.setdefault(j.stem[:10], []).append(j)
+    for day, djpgs in days.items():
+        write(COLL / day / "catalog.json", {
+            "type": "Catalog", "stac_version": V, "id": f"{COLLECTION}-{day}",
+            "description": f"Photos taken on {day}.",
+            "links": [{"rel": "root", "href": "../../catalog.json", "type": JSON_T},
+                      {"rel": "parent", "href": "../collection.json", "type": JSON_T},
+                      {"rel": "collection", "href": "../collection.json", "type": JSON_T}]
+                     + [{"rel": "item", "href": f"items/{j.stem}/{j.stem}.json", "type": GEO_T} for j in djpgs],
+        })
     write(STAC / COLLECTION / "collection.json", {
         "type": "Collection", "stac_version": V, "id": COLLECTION,
         "title": "São Paulo panorama, first collection",
@@ -131,7 +143,7 @@ def main():
         "links": [{"rel": "root", "href": "../catalog.json", "type": JSON_T},
                   {"rel": "parent", "href": "../catalog.json", "type": JSON_T},
                   {"rel": "license", "href": CC0}]
-                 + [{"rel": "item", "href": f"items/{j.stem}/{j.stem}.json", "type": GEO_T} for j in jpgs],
+                 + [{"rel": "child", "href": f"{day}/catalog.json", "type": JSON_T} for day in days],
     })
     write(STAC / "catalog.json", {
         "type": "Catalog", "stac_version": V, "id": "sp-panorama",
@@ -139,7 +151,7 @@ def main():
         "links": [{"rel": "root", "href": "catalog.json", "type": JSON_T},
                   {"rel": "child", "href": f"{COLLECTION}/collection.json", "type": JSON_T}],
     })
-    print(f"{len(jpgs)} items -> {STAC}")
+    print(f"{len(jpgs)} items in {len(days)} day catalogs -> {STAC}")
 
 
 assert tilt([0, 1, 0]) == (0, 0) and tilt([-0.0849, 0.9953, -0.0435])[0] == -4.88
