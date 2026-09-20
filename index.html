@@ -22,6 +22,9 @@
   button { font: inherit; color: #eee; background: none; border: 0; border-radius: 999px;
            padding: 6px 12px; cursor: pointer; line-height: 1; }
   button:hover { background: rgba(255,255,255,.15); }
+  nav button { display: flex; align-items: center; gap: 3px; }
+  #prev, #next { font-size: 22px; padding: 2px 12px; }   /* single photo step */
+  nav b { font: 600 11px/1 system-ui; letter-spacing: .06em; text-transform: uppercase; opacity: .75; }
   .gap { font-size: 12px; color: #fa0; padding: 0 4px; white-space: nowrap; }
 
   dialog { border: 0; border-radius: 12px; background: #1b1b1b; color: #eee; padding: 20px 24px; max-width: 90vw; }
@@ -41,13 +44,13 @@
 
 <nav>
   <span class="gap" id="gapL"></span>
-  <button id="dayP" title="Previous day (Shift+←)">◀◀</button>
-  <button id="prev" title="Previous photo (←)">◀</button>
-  <button id="play" title="Play (space)">▶︎</button>
-  <button id="next" title="Next photo (→)">▶</button>
-  <button id="dayN" title="Next day (Shift+→)">▶▶</button>
-  <button id="cal" title="Pick a date">🗓</button>
-  <button id="info" title="About">?</button>
+  <button id="dayP" title="Previous day (Shift+←)" aria-label="Previous day">⏮<b>day</b></button>
+  <button id="prev" title="Previous photo (←)" aria-label="Previous photo">‹</button>
+  <button id="play" title="Play (space)" aria-label="Play">▶︎</button>
+  <button id="next" title="Next photo (→)" aria-label="Next photo">›</button>
+  <button id="dayN" title="Next day (Shift+→)" aria-label="Next day"><b>day</b>⏭</button>
+  <button id="cal" title="Pick a date" aria-label="Pick a date">🗓</button>
+  <button id="info" title="About" aria-label="About">?</button>
   <span class="gap" id="gapR"></span>
 </nav>
 
