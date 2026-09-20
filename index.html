@@ -92,7 +92,8 @@ function levelImg() {
   if (!hires() || !roll || !im.naturalWidth) return im.style.transform = '';
   const a = Math.abs(roll) * Math.PI / 180, W = im.naturalWidth, H = im.naturalHeight;
   const s = Math.min(W / (W * Math.cos(a) + H * Math.sin(a)), H / (W * Math.sin(a) + H * Math.cos(a)));
-  im.style.transform = `rotate(${-roll}deg) scale(${1 / s})`;   // scale up so the corners stay covered
+  // CSS rotates clockwise, PIL counter-clockwise, so this is the sign make_stac.py uses, flipped
+  im.style.transform = `rotate(${roll}deg) scale(${1 / s})`;    // scale up so the corners stay covered
 }
 
 // index of the image closest to time t (binary search)
